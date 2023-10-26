@@ -1,5 +1,6 @@
 import React from 'react'
 import img_samantha from '../../assets/images/samantha.png'
+import { NavLink } from 'react-router-dom'
 
 
 function AboutCompany() {
@@ -23,8 +24,8 @@ function AboutCompany() {
                     </p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium libero provident voluptate amet.</p>
                     <div className="about-company-buttons">
-                        <a href="#"><button className="btn-black">Learn More</button ></a>  
-                        <a href="#"> <i className="fa-regular fa-circle-play"></i> Intro video</a> 
+                        <NavLink to="*"><button className="btn-black">Learn More</button ></NavLink>  
+                        <NavLink to="*"> <i className="fa-regular fa-circle-play"></i> Intro video</NavLink> 
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Advicebox from '../Toolboxes/Advicebox'
+import { NavLink } from 'react-router-dom'
 
 function Features() {
   return (
@@ -10,7 +11,7 @@ function Features() {
                       <div className="features">
                        <p>Features</p>
                         <h2>Our Accounting is trusted by thousand of companies</h2>
-                        <a className="btn-yellow" href="#">Learn More<i className="fa-regular fa-arrow-up-right"></i></a>
+                        <NavLink className="btn-yellow" to="*">Learn More<i className="fa-regular fa-arrow-up-right"></i></NavLink>
                      </div>
               
                     <div className="Advice-container">

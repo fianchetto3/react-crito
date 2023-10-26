@@ -6,6 +6,9 @@ import Showcase from '../components/Showcases/Showcase'
 import Logos from '../components/Logos'
 import Features from '../components/Showcases/Features'
 import AboutCompany from '../components/Showcases/AboutCompany'
+import Services from '../components/Showcases/Services'
+import ChooseUs from '../components/Showcases/ChooseUs'
+import Projects from '../components/Showcases/Projects'
 
 const Home = () => {
   return (
@@ -17,6 +20,9 @@ const Home = () => {
           <Logos/>
           <Features/>
           <AboutCompany/>
+          <Services/>
+          <ChooseUs/>
+          <Projects/>
         
       </main> 
       

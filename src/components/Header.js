@@ -1,13 +1,13 @@
 import React from 'react'
 import img_logotpye from '../assets/images/Logo.svg'
-
+import { NavLink, Link } from 'react-router-dom'
 
 function Header() {
   return (
     <header>
                       <div className="header-home">
                     <div className="container">
-                    <a href="index.html"> <img src={img_logotpye} alt=""/>   </a> 
+                    <Link to="/"> <img src={img_logotpye} alt=""/></Link> 
                         <div className="menu">
                             <div className="top-menu">
                                 <div className="contact-info">    
@@ -25,20 +25,20 @@ function Header() {
                                 </div> 
                                 </div>
                                 <div className="social-media">  
-                                    <a href="https://facebook.com"target="_blank"><i className="fa-brands fa-facebook"></i> </a>
-                                    <a href="https://twitter.com" target="_blank"><i className="fa-brands fa-x-twitter"></i> </a>
-                                    <a href="https://instagram.com" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-                                    <a href="https://linkedin.com" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+                                    <NavLink to="https://facebook.com"target="_blank"><i className="fa-brands fa-facebook"></i> </NavLink>
+                                    <NavLink to="https://twitter.com" target="_blank"><i className="fa-brands fa-x-twitter"></i> </NavLink>
+                                    <NavLink to="https://instagram.com" target="_blank"><i className="fa-brands fa-instagram"></i></NavLink>
+                                    <NavLink to="https://linkedin.com" target="_blank"><i className="fa-brands fa-linkedin"></i></NavLink>
                                 </div>
                             </div>
                             <div className="main-menu">
                                 <nav>
-                                    <a className="active" href="index.html">Home</a>
-                                    <a href="services.html">Service</a>
-                                    <a href="news.html">News</a>
-                                    <a href="contacts.html">Contact</a>
+                                    <NavLink to="/">Home</NavLink>
+                                    <NavLink to="/services">Services</NavLink>
+                                    <NavLink to="/news">News</NavLink>
+                                    <NavLink to="/contacts">Contacts</NavLink>
                                 </nav>
-                                <a className="btn-yellow btn-login" href="login.html">Login <i className="fa-regular fa-arrow-up-right"></i></a>
+                                <NavLink className="btn-yellow btn-login" to="login.html">Login <i className="fa-regular fa-arrow-up-right"></i></NavLink>
                             </div>
                         </div>
                     </div>
