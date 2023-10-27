@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export default function Projects() {
   return (
     <>
-         <section className="projects">
+        <section className="projects">
         <div className="container">
             <div className="title">
                 <h3>Project & Cases Studies</h3>
@@ -25,10 +25,6 @@ export default function Projects() {
              </div>   
         </div>
      </section>
-    
-    
-    
-    
     </>
   )
 }

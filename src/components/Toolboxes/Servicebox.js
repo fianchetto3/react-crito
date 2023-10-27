@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Servicebox({title, description, url, backgroundColor}) {
+function Servicebox({ className ,title, description, url,}) {
 
   return (
 
-     <div className="business-advice" >
+     <div className={className} >
         <div className="test"></div>
           <h3> {title} </h3>
            <p> {description} </p>

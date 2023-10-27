@@ -1,5 +1,5 @@
 import React from 'react'
-import img_logotpye from '../assets/images/Logo.svg'
+import img_logotpye from '../../assets/images/Logo.svg'
 import { NavLink, Link } from 'react-router-dom'
 
 function Header() {
@@ -30,15 +30,6 @@ function Header() {
                                     <NavLink to="https://instagram.com" target="_blank"><i className="fa-brands fa-instagram"></i></NavLink>
                                     <NavLink to="https://linkedin.com" target="_blank"><i className="fa-brands fa-linkedin"></i></NavLink>
                                 </div>
-                            </div>
-                            <div className="main-menu">
-                                <nav>
-                                    <NavLink to="/">Home</NavLink>
-                                    <NavLink to="/services">Services</NavLink>
-                                    <NavLink to="/news">News</NavLink>
-                                    <NavLink to="/contacts">Contacts</NavLink>
-                                </nav>
-                                <NavLink className="btn-yellow btn-login" to="/login">Login <i className="fa-regular fa-arrow-up-right"></i></NavLink>
                             </div>
                         </div>
                     </div>
