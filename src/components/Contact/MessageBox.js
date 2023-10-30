@@ -1,4 +1,5 @@
 import React from 'react'
+import FormInput from './FormInput'
 
 function MessageBox() {
   return (
@@ -8,15 +9,9 @@ function MessageBox() {
                             <div className="message-box">
                                 <div className="headline"> <h2>Leave us a message for any information.</h2> </div>
                                 <div className="search-bars">
-                                    <form className="name-bar" action="">
-                                        <input type="text" placeholder="Name*"/>
-                                    </form>
-                                    <form className="email-bar" action="">
-                                        <input type="text" placeholder="Email*"/>
-                                    </form>
-                                    <form className="message-bar" action="">
-                                        <input type="text" placeholder="Your Message*"/>
-                                    </form>
+                                    <FormInput className ="name-bar" placeholder="Name*"  />
+                                    <FormInput className="email-bar" placeholder="Email*" />
+                                    <FormInput className="message-bar" placeholder="Message*" />
                                 </div>
                                 <div className="send-btn">
                                     <a href=""> <button className="btn-yellow">Send Message <i className="fa-regular fa-arrow-up-right"></i></button> </a>
