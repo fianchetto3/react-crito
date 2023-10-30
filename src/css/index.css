@@ -1336,6 +1336,7 @@ h3 {
 .map .map-img {
   display: flex;
 }
-.map .map-img .google-map {
+.map .map-img iframe {
   width: 100%;
+  border: 0;
 }

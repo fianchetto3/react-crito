@@ -1573,9 +1573,9 @@ h3{
         padding-top: 100px;
         .map-img{
          display: flex;
-            .google-map{
+            iframe  {
                 width: 100%;
-              
+                border: 0;
             }
         }
     
