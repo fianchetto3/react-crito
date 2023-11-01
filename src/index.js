@@ -5,6 +5,7 @@ import './css/index.css';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
 import NotFound from './views/NotFound';
+import Aritcels from './views/Articles'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='news' element={<Aritcels/>}/>
       <Route path='contacts' element={<Contacts/>}/>
       <Route path='*' element={<NotFound/> } />
     </Routes>
