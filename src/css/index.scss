@@ -1499,6 +1499,14 @@ h3{
         
         .message-box{
             
+            .error-message{
+                text-align: center;
+                margin: 40px;
+                font-size: 20px;
+                color: #F94D1C;
+
+            }
+
             .headline{
                 display: flex;
                 justify-content: center;
@@ -1558,12 +1566,10 @@ h3{
                 padding-top: 55px;
                 display: block;
                 text-align: center;
-
-                    a{
                         .btn-yellow{
                             width: 100%;
                         }
-                    }
+                   
             }
 
         }

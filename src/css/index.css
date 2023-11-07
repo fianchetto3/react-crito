@@ -1282,6 +1282,12 @@ h3 {
     padding: 5px;
   }
 }
+.message-us .container .message-box .error-message {
+  text-align: center;
+  margin: 40px;
+  font-size: 20px;
+  color: #F94D1C;
+}
 .message-us .container .message-box .headline {
   display: flex;
   justify-content: center;
@@ -1326,7 +1332,7 @@ h3 {
   display: block;
   text-align: center;
 }
-.message-us .container .send-btn a .btn-yellow {
+.message-us .container .send-btn .btn-yellow {
   width: 100%;
 }
 
