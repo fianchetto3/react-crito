@@ -5,10 +5,16 @@ function MessageBox() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [errorMessage, setErrorMessage ] = useState ('')
+  const [validationErrorName, setvalidationErrorName] = useState ('')
+  const [validationErrorEmail, setvalidationErrorEmail ] = useState ('')
+  const [validationErrorSend, setvalidationErrorSend] = useState ('')
+
+
  
     const handleSubmit = async (e) => {
       e.preventDefault()
       setErrorMessage('')
+      validateForm ();
 
         const user = {name, email, message}
         const json = JSON.stringify(user)
@@ -42,6 +48,39 @@ function MessageBox() {
       setMessage ('')
     }
 
+    const clearNameEmail = () => {
+      setName ('')
+      setEmail ('')
+    }
+
+    
+    function validateForm (){
+      setvalidationErrorName('')
+      setvalidationErrorEmail('')
+      setvalidationErrorSend ('')
+
+      if (name.length == 0){
+        setvalidationErrorName('Du måste ange ett namn')
+        clearNameEmail ()
+        return;
+      }
+
+      if (email.length == 0){
+        setvalidationErrorEmail('Du måste ange en Email')
+        clearNameEmail()
+        return;
+      }
+      if (message.length == 0){
+        setvalidationErrorSend ('Du måste skriva ett Medelande')
+        return;
+      }
+
+      
+
+    }
+
+
+
   return (
   
     <>
@@ -52,21 +91,22 @@ function MessageBox() {
                  <p className='error-message'> {errorMessage} </p>
 
                      <div className="search-bars">
+                      <p className='validation-error-message'> {validationErrorName} </p>
                         <label className="name-bar" action="">
                         <input type="text" placeholder="Name*" value={name} onChange={(e) => setName(e.target.value) } />
                         </label>
-
+                        <p className='validation-error-message' > {validationErrorEmail} </p>
                         <label className="email-bar" action="">
                         <input type="email" placeholder="Email*"  value={email} onChange={(e) => setEmail(e.target.value) }  />
                         </label>
-
+                        <p className='validation-error-message'  > {validationErrorSend} </p>
                         <label className="message-bar" action="">
                         <input type="text" placeholder="Your Message*"  value={message} onChange={(e) => setMessage(e.target.value) } />
                          </label>
                        </div>
 
                        <div className="send-btn">
-                       <button className="btn-yellow">Send Message <i className="fa-regular fa-arrow-up-right"></i></button> 
+                       <button type="submit" onClick={() => { validateForm() }}  className="btn-yellow">Send Message <i className="fa-regular fa-arrow-up-right"></i></button> 
                        </div>
               </div>
            </div>

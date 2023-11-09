@@ -1526,7 +1526,13 @@ h3{
                 gap: 20px;
                 display: flex;
                 flex-direction: column;
+                
 
+                .validation-error-message{
+                    color: #F94D1C;
+                    font-size: 20px;
+                    margin:  10px;
+                }
 
                 .name-bar{
                     input{

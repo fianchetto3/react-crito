@@ -1304,6 +1304,11 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.message-us .container .message-box .search-bars .validation-error-message {
+  color: #F94D1C;
+  font-size: 20px;
+  margin: 10px;
+}
 .message-us .container .message-box .search-bars .name-bar input {
   width: 100%;
   padding: 15px;
