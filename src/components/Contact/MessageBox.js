@@ -14,7 +14,9 @@ function MessageBox() {
     const handleSubmit = async (e) => {
       e.preventDefault()
       setErrorMessage('')
-      validateForm ();
+
+      
+      if (validateForm()){
 
         const user = {name, email, message}
         const json = JSON.stringify(user)
@@ -32,12 +34,12 @@ function MessageBox() {
         switch (result.status){
           case 200:
             clearForm()
-              alert('Meddelandet Skickades')
+              alert('Message sent')
               break
           case 400:
-            setErrorMessage('Något gick snett, Kontrollera dina uppgifter')
-            
+            setErrorMessage('Something went Wrong, Check your details')
             break
+          }
         }
 
     }
@@ -55,31 +57,30 @@ function MessageBox() {
 
     
     function validateForm (){
-      setvalidationErrorName('')
-      setvalidationErrorEmail('')
-      setvalidationErrorSend ('')
+      let isValid = true;
 
       if (name.length == 0){
-        setvalidationErrorName('Du måste ange ett namn')
+        setvalidationErrorName('You must Enter A Name')
         clearNameEmail ()
-        return;
+        isValid = false;
       }
 
       if (email.length == 0){
-        setvalidationErrorEmail('Du måste ange en Email')
+        setvalidationErrorEmail('You must Enter an Email')
         clearNameEmail()
-        return;
+        isValid = false;
       }
       if (message.length == 0){
-        setvalidationErrorSend ('Du måste skriva ett Medelande')
-        return;
+        setvalidationErrorSend ('You must type a Message')
+        isValid = false;
       }
 
+       return isValid;
       
 
     }
 
-
+    
 
   return (
   
