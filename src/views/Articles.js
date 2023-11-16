@@ -8,6 +8,8 @@ import PageTitle from "../components/generics/PageTitle"
 
 
 
+// API articles
+
 const Articles = () => {
 
   const [articles, setArticles] = useState([])
@@ -29,7 +31,7 @@ const Articles = () => {
       <Header/>
         <main>
           <PageTitle title='News & Articles' path ='News' />
-
+          
 
 
 

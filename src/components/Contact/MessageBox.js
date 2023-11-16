@@ -16,6 +16,7 @@ function MessageBox() {
       setErrorMessage('')
 
       
+      // Checkar validering, om rätt, anropa API annars anropas de ej 
       if (validateForm()){
 
         const user = {name, email, message}
@@ -55,6 +56,7 @@ function MessageBox() {
       setEmail ('')
     }
 
+      // Validerar, kräver att fälten måste ha ett värde för attt kunna skickas
     
     function validateForm (){
       let isValid = true;
